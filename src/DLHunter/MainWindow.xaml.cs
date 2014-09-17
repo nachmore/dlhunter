@@ -23,11 +23,12 @@ namespace DLHunter
     {
         private List<Outlook.AddressEntry> _seenDLs;
         private Outlook.Application _outlook;
-
+        private Outlook.AddressEntry _currentUser;
         public MainWindow()
         {
             InitializeComponent();
             _outlook = new Outlook.Application(); // TODO: is it ok to instantiate this once?
+            _currentUser = _outlook.Application.Session.CurrentUser.AddressEntry;
 
             txtAlias.Focus();
         }
@@ -49,7 +50,6 @@ namespace DLHunter
                     alias += "@" + domain;
                 }
             }
-
             
             // Get an address entry from this alias - it looks like the easiest way to do this is to add
             // this to a mail item and then get Outlook to handle resolving it
@@ -125,7 +125,7 @@ namespace DLHunter
         {
             if (AlreadyEnumeratedDL(dl))
             {
-                System.Diagnostics.Debug.WriteLine(prefix + dl.Name + ": <skipping nested dl>");
+                System.Diagnostics.Debug.WriteLine(prefix + dl.Name + "> <skipping nested dl>");
             }
             else
             {
@@ -140,13 +140,16 @@ namespace DLHunter
                     {
                         if (exchDLMember.AddressEntryUserType == Outlook.OlAddressEntryUserType.olExchangeDistributionListAddressEntry)
                         {
-                            EnumerateDL(exchDLMember, prefix + dl.Name + ": ");
+                            EnumerateDL(exchDLMember, prefix + dl.Name + " > ");
                         }
                         else
                         {
-                            var entry = prefix + dl.Name + ": " + exchDLMember.Name;
+                            var entry = prefix + dl.Name + " > " + exchDLMember.Name;
                             System.Diagnostics.Debug.WriteLine(entry);
                             lstMembers.Items.Add(entry);
+
+                            if (exchDLMember.Address == _currentUser.Address)
+                                MessageBox.Show("Found You!\n\n" + entry);
                         }
                     }
                 }
