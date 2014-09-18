@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="DLHunter.exe" version="1.0.0.1" publicKeyToken="8767a5696ca4f234" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="DLHunter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="DLHunter.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DLHunter.exe" size="22016">
+      <assemblyIdentity name="DLHunter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>XbEU2CzRDB/a1Uh1w3WWw0/NhrIzSArTWWzN6G6CH4k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="DLHunter.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=REDMOND\orena" issuerKeyHash="057c779fe5abcbd297d46963149d4f1db02ee04a" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Q1X/Pvq7T2gP58NnJ/tMsUKt9xZLivfPUeUrRQgglgc=</DigestValue></Reference></SignedInfo><SignatureValue>A74+I75fO39jvfGvPX0RJeN68aoWMzYMCotfS+NNK92Ie9wA24+lPtUFTZjK+05fM3rRmBTEnDgqkOrqnvGV4rDqoepYM0650Cwn53GTbcp6jnXAHJkhSE5Jpu82XsPzQmNh3S87NxVpGqKspUtw324jlfkJcVkJDsjcvtgWJZc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>jrXAgLvbx6T5FTIdOqGWUs6XjAfa6gpXWygBP+s4Ww21XaTLLE7J4kfQqp7DCQnINxEZm+qdmaquWCpKgrUOH3nE75Ag4Q+VETILUffm9JvTQ8LMOMse8qpICOrJba/Dk+7UUD86bri1xNLFChZ3DIV19e2tm8leBLa3ZJUnP88=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="07962008452be551cff78a4b16f7ad42b14cfb2767c3e70f684fbbfa3eff5543" Description="" Url=""><as:assemblyIdentity name="DLHunter.exe" version="1.0.0.1" publicKeyToken="8767a5696ca4f234" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=REDMOND\orena</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>rQHV8rdc1tz0Q+ZzYj2YAx3UBF4BKX/pW9Vjoq4XHrU=</DigestValue></Reference></SignedInfo><SignatureValue>MiMJ5tOMnlzylCrdPL9JbikFaCYCzlOh+Iydo/Lxw+4LADTtz6GH5x89vMqC/oCjo82HvWU72ev6GxNPCnD/KPntGVrGbqyjpHCRp/ZRSCK+lMZdD6Z4FNq+fK4y4EajPu5632VxmWNo5yyx1BrZMDnc17ZOJhRyjGMQOOWX0Bg=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>jrXAgLvbx6T5FTIdOqGWUs6XjAfa6gpXWygBP+s4Ww21XaTLLE7J4kfQqp7DCQnINxEZm+qdmaquWCpKgrUOH3nE75Ag4Q+VETILUffm9JvTQ8LMOMse8qpICOrJba/Dk+7UUD86bri1xNLFChZ3DIV19e2tm8leBLa3ZJUnP88=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQJI8TXjGFfKROW2yfKCKBKjANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDHhoAUgBFAEQATQBPAE4ARABcAG8AcgBlAG4AYTAeFw0xNDA5MTcxOTU4MjdaFw0xNTA5MTgwMTU4MjdaMCUxIzAhBgNVBAMeGgBSAEUARABNAE8ATgBEAFwAbwByAGUAbgBhMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCOtcCAu9vHpPkVMh06oZZSzpeMB9rqCldbKAE/6zhbDbVdpMssTsniR9CqnsMJCcg3ERmb6p2Zqq5YKkqCtQ4fecTvkCDhD5URMgtR9+b0m9NDwsw4yx7yqkgI6sltr8OT7tRQPzpuuLXE0sUKFncMhXX17a2byV4EtrdklSc/zwIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAHGDRQHPwHK0LLAxl0/Oz2NRBZiLXHMePu/2VItTBuDVuDo47cXL0rQ9O2UHCw+YOz5H3NNPKXliGUsiQI3XTjs8e1yQji69bpvka70ToGa/t97rOH8ysk1JtRMz6nNq3fNnelK2h6monLxRlbFPFgnv1MNoj1NZd1l3UrL7h8pz</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
