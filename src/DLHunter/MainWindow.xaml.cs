@@ -24,6 +24,7 @@ namespace DLHunter
         private List<Outlook.AddressEntry> _seenDLs;
         private Outlook.Application _outlook;
         private Outlook.AddressEntry _currentUser;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -172,6 +173,5 @@ namespace DLHunter
             if (e.Key == Key.Enter)
                 btnFromAlias_Click(null, null);
         }
-
     }
 }

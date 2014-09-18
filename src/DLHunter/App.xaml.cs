@@ -20,7 +20,7 @@ namespace DLHunter
 
         void App_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {
-            MessageBox.Show("Oops, something bad happened. There may be useful information below, if not, email me.\n\n" + e.Exception.ToString());
+            MessageBox.Show("DL Hunter, v" + About.Version() + "\n\nOops, something bad happened. There may be useful information below, if not, email me.\n\n" + e.Exception.ToString());
         }
     }
 }
